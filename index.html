@@ -54,7 +54,14 @@
             padding: 20px;
             border-radius: 5px;
         }
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
     </style>
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header>
@@ -63,7 +70,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container" id="content-to-print">
         <img src="profile-pic.jpg" alt="MD. TANVEER ANJUM" class="profile-img">
         
         <a href="#" class="download-btn" onclick="generatePDF()">Download CV as PDF</a>
@@ -126,7 +133,15 @@
 
     <script>
         function generatePDF() {
-            alert("This function would generate and download a PDF of your CV. You'll need to implement this server-side or use a PDF generation library.");
+            var element = document.getElementById('content-to-print');
+            var opt = {
+                margin:       1,
+                filename:     'TanveerAnjum_CV.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
         }
     </script>
 </body>

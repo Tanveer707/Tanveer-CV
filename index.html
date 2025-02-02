@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Previous head content remains the same -->
+<head>
+    <style>
+        /* Previous styles remain the same */
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .contact-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .contact-item strong {
+            min-width: 120px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<!-- In the body, replace the Personal Information section with: -->
+<div class="section">
+    <h2>Personal Information</h2>
+    <div class="contact-info">
+        <div class="contact-column">
+            <div class="contact-item">
+                <strong>Full Name:</strong>
+                <span>MD. TANVEER ANJUM</span>
+            </div>
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <span>tanveerbadhon707@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <strong>Phone:</strong>
+                <span>01576567412</span>
+            </div>
+        </div>
+        <div class="contact-column">
+            <div class="contact-item">
+                <strong>Father's Name:</strong>
+                <span>Md. Moshiar Rahman</span>
+            </div>
+            <div class="contact-item">
+                <strong>Mother's Name:</strong>
+                <span>Babina Rahman</span>
+            </div>
+            <div class="contact-item">
+                <strong>Address:</strong>
+                <span>House: 4/3-C, Road: East Vashantek, Dhaka cantonment, Dhaka 1206</span>
+            </div>
+        </div>
+    </div>
+</div>

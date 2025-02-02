@@ -1,263 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Previous head content remains the same -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD. TANVEER ANJUM - Professional CV</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-        
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --text-color: #333;
-            --bg-color: #ecf0f1;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-        }
-        
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: var(--secondary-color);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            animation: fadeInDown 1s ease-out;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out forwards;
-            animation-delay: 0.5s;
-        }
-        
-        .profile-img {
-            display: block;
-            width: 200px;
-            height: 200px;
-            margin: 20px auto;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-        
-        .section {
-            background: white;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        ul {
-            list-style-type: none;
-        }
-        
-        ul li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        ul li::before {
-            content: '▹';
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
+        /* Previous styles remain the same */
         
         .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .contact-column {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
         }
         
-        .contact-info p {
-            margin: 5px 0;
-            flex-basis: 48%;
+        .contact-item {
+            display: flex;
+            align-items: baseline;
         }
         
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .contact-item strong {
+            min-width: 120px;
+            margin-right: 10px;
         }
         
         @media (max-width: 768px) {
-            .contact-info p {
-                flex-basis: 100%;
+            .contact-info {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>MD. TANVEER ANJUM</h1>
-            <p>Electrical and Electronics Engineering Student</p>
-        </div>
-    </header>
 
-    <div class="container">
-        <img src="profile-pic.jpg" alt="MD. TANVEER ANJUM" class="profile-img">
-        
-        <div class="section">
-            <h2>Professional Summary</h2>
-            <p>Ambitious Electrical Engineering student with a strong foundation in electrical and electronics principles. Demonstrates exceptional problem-solving skills and a proactive approach to learning. Possesses hands-on experience in machine learning projects and effective programming skills in Python. Highly motivated to leverage academic knowledge and internship experiences to contribute innovative solutions in the field of Electrical and Electronics Engineering.</p>
-        </div>
-
-        <div class="section">
-            <h2>Personal Information</h2>
-            <div class="contact-info">
-                <p><strong>Full Name:</strong> MD. TANVEER ANJUM</p>
-                <p><strong>Father's Name:</strong> Md. Moshiar Rahman</p>
-                <p><strong>Mother's Name:</strong> Babina Rahman</p>
-                <p><strong>Address:</strong> House: 4/3-C, Road: East Vashantek, Dhaka cantonment, Dhaka 1206</p>
-                <p><strong>Email:</strong> tanveerbadhon707@gmail.com</p>
-                <p><strong>Phone:</strong> 01576567412</p>
+<!-- In the body, replace the Personal Information section with: -->
+<div class="section">
+    <h2>Personal Information</h2>
+    <div class="contact-info">
+        <div class="contact-column">
+            <div class="contact-item">
+                <strong>Full Name:</strong>
+                <span>MD. TANVEER ANJUM</span>
+            </div>
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <span>tanveerbadhon707@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <strong>Phone:</strong>
+                <span>01576567412</span>
             </div>
         </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <h3>Bachelor of Science in Electrical and Electronics Engineering</h3>
-            <p><strong>Institution:</strong> BRAC University</p>
-            <p><strong>Expected Graduation:</strong> January 2025</p>
-            <p><strong>Relevant Coursework:</strong> Circuit Analysis, Digital Electronics, Microprocessors and Embedded Systems, Control Systems, Power Systems, Electromagnetic Theory, Signal Processing</p>
-
-            <h3>Higher Secondary Certificate (HSC)</h3>
-            <p><strong>Institution:</strong> Adamjee Cantonment College</p>
-            <p><strong>Year:</strong> 2018-2019</p>
-            <p><strong>Grade:</strong> 4.5 out of 5.0</p>
-
-            <h3>Secondary School Certificate (SSC)</h3>
-            <p><strong>Institution:</strong> BAF Shaheen College Kurmitola</p>
-            <p><strong>Year:</strong> 2016-2017</p>
-            <p><strong>Grade:</strong> 5.00 out of 5.00</p>
-        </div>
-
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Proficient in Python, familiar with C++ and MATLAB</li>
-                <li><strong>Software Tools:</strong> Microsoft Office Suite (Word, Excel, PowerPoint), AutoCAD, Altium Designer, PSpice, Proteus</li>
-                <li><strong>Hardware:</strong> Microcontrollers (Arduino, Raspberry Pi), Sensors integration</li>
-                <li><strong>Circuit Design:</strong> Analog and Digital circuit design, PCB layout and fabrication</li>
-                <li><strong>Machine Learning:</strong> Basic understanding of ML algorithms and their applications in EEE</li>
-                <li><strong>Version Control:</strong> Familiar with Git and GitHub</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Projects</h2>
-            <h3>PyroSentry: Advanced Image-Based Fire Localization and Extinguishing Network (2024-Present)</h3>
-            <ul>
-                <li>Developed an intelligent system using real-time image processing to detect and localize fires</li>
-                <li>Implemented computer vision algorithms for accurate fire detection</li>
-                <li>Designed an automated extinguishing mechanism for rapid response</li>
-                <li>Reduced potential fire damage by improving response times</li>
-            </ul>
-            
-            <h3>Traffic Surveillance System with Vehicle Detection (2023)</h3>
-            <ul>
-                <li>Implemented a vehicle detection system using YOLOv9 algorithm</li>
-                <li>Developed classification system for various vehicle types (cars, trucks, etc.)</li>
-                <li>Integrated real-time data processing for traffic flow analysis</li>
-                <li>Improved traffic management efficiency through data-driven insights</li>
-            </ul>
-            
-            <h3>Gas Leakage Detection System for Kitchens (2023)</h3>
-            <ul>
-                <li>Designed and implemented a safety system using gas sensors for leak detection</li>
-                <li>Developed a mobile application for real-time alerts and notifications</li>
-                <li>Integrated IoT technology for remote monitoring and control</li>
-                <li>Enhanced kitchen safety through early detection and warning system</li>
-            </ul>
-            
-            <h3>Agricultural Rover: Base Station Subsystem (2023)</h3>
-            <ul>
-                <li>Contributed to the development of communication and control interfaces for an agricultural rover</li>
-                <li>Implemented data visualization tools for real-time monitoring of rover operations</li>
-                <li>Designed user-friendly interface for remote control and data analysis</li>
-                <li>Improved agricultural efficiency through automated data collection and analysis</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Languages</h2>
-            <ul>
-                <li><strong>Bengali:</strong> Native proficiency</li>
-                <li><strong>English:</strong> Professional working proficiency</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Interests</h2>
-            <ul>
-                <li>Renewable Energy Technologies</li>
-                <li>Internet of Things (IoT) Applications in EEE</li>
-                <li>Artificial Intelligence and Machine Learning in Electronics</li>
-                <li>Robotics and Automation</li>
-            </ul>
+        <div class="contact-column">
+            <div class="contact-item">
+                <strong>Father's Name:</strong>
+                <span>Md. Moshiar Rahman</span>
+            </div>
+            <div class="contact-item">
+                <strong>Mother's Name:</strong>
+                <span>Babina Rahman</span>
+            </div>
+            <div class="contact-item">
+                <strong>Address:</strong>
+                <span>House: 4/3-C, Road: East Vashantek, Dhaka cantonment, Dhaka 1206</span>
+            </div>
         </div>
     </div>
-</body>
-</html>
+</div>
